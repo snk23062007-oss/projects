@@ -1,0 +1,10 @@
+2026-08-01T09:15:10|Server-A|North|INFO|None|Application started successfully|N/A
+2026-08-01T09:18:25|Server-A|North|WARNING|DiskSpaceWarning|Disk space below 20%|StorageMonitor.java:45
+2026-08-01T09:20:14|Server-A|North|ERROR|SQLException|Database connection failed|Database.java:87
+2026-08-01T09:23:51|Server-A|North|INFO|None|Retry completed successfully|N/A
+2026-08-01T09:28:43|Server-A|North|ERROR|NullPointerException|Unexpected null object|UserService.java:72
+2026-08-01T09:31:22|Server-A|North|WARNING|TimeoutException|Request exceeded time limit|NetworkManager.java:113
+2026-08-01T09:35:06|Server-A|North|ERROR|SQLException|Database query timeout|Database.java:102
+2026-08-01T09:40:18|Server-A|North|INFO|None|Health check completed|N/A
+2026-08-01T09:44:32|Server-A|North|FATAL|OutOfMemoryError|JVM heap space exhausted|MemoryManager.java:91
+2026-08-01T09:49:05|Server-A|North|INFO|None|Application recovered|N/A

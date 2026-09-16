@@ -1,10 +1,20 @@
 2026-08-01T09:15:10|Server-A|North|INFO|None|Application started successfully|N/A
 2026-08-01T09:18:25|Server-A|North|WARNING|DiskSpaceWarning|Disk space below 20%|StorageMonitor.java:45
-2026-08-01T09:20:14|Server-A|North|ERROR|SQLException|Database connection failed|Database.java:87
-2026-08-01T09:23:51|Server-A|North|INFO|None|Retry completed successfully|N/A
-2026-08-01T09:28:43|Server-A|North|ERROR|NullPointerException|Unexpected null object|UserService.java:72
-2026-08-01T09:31:22|Server-A|North|WARNING|TimeoutException|Request exceeded time limit|NetworkManager.java:113
-2026-08-01T09:35:06|Server-A|North|ERROR|SQLException|Database query timeout|Database.java:102
-2026-08-01T09:40:18|Server-A|North|INFO|None|Health check completed|N/A
-2026-08-01T09:44:32|Server-A|North|FATAL|OutOfMemoryError|JVM heap space exhausted|MemoryManager.java:91
-2026-08-01T09:49:05|Server-A|North|INFO|None|Application recovered|N/A
+2026-08-01T09:20:12|Server-B|South|ERROR|NullPointerException|Null reference encountered while processing request|Main.java:78
+2026-08-01T09:22:30|Server-C|East|ERROR|SQLException|Database connection failed|Database.java:112
+2026-08-01T09:25:18|Server-A|North|INFO|None|User login successful|N/A
+2026-08-01T09:30:40|Server-D|West|WARNING|SocketTimeoutException|Connection timeout while contacting API|NetworkManager.java:67
+2026-08-01T09:35:05|Server-B|South|ERROR|ArrayIndexOutOfBoundsException|Array index exceeded valid range|Parser.java:91
+2026-08-01T09:40:15|Server-C|East|INFO|None|Scheduled backup completed|N/A
+2026-08-01T09:45:55|Server-E|Central|ERROR|IOException|Unable to read configuration file|ConfigLoader.java:38
+2026-08-01T09:50:20|Server-D|West|FATAL|OutOfMemoryError|JVM heap space exhausted|MemoryManager.java:120
+2026-08-01T10:00:05|Server-A|North|INFO|None|Heartbeat received|N/A
+2026-08-01T10:05:50|Server-B|South|WARNING|AuthenticationException|Invalid login attempt detected|Security.java:56
+2026-08-01T10:10:22|Server-C|East|ERROR|FileNotFoundException|Log configuration file missing|Logger.java:102
+2026-08-01T10:15:44|Server-E|Central|INFO|None|Email notification sent|N/A
+2026-08-01T10:20:30|Server-D|West|ERROR|ClassNotFoundException|Required driver class not found|DriverLoader.java:29
+2026-08-01T10:25:18|Server-A|North|WARNING|IllegalArgumentException|Invalid request parameter|RequestHandler.java:83
+2026-08-01T10:30:55|Server-B|South|ERROR|ArithmeticException|Division by zero|Calculator.java:41
+2026-08-01T10:35:10|Server-C|East|INFO|None|Configuration reloaded|N/A
+2026-08-01T10:40:25|Server-E|Central|FATAL|StackOverflowError|Recursive method exceeded stack limit|RecursiveTask.java:151
+2026-08-01T10:45:48|Server-D|West|ERROR|TimeoutException|Request processing timed out|Processor.java:88

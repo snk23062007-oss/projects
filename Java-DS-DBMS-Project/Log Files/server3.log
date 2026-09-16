@@ -1,0 +1,58 @@
+2026-08-03T09:01:24|Server-C|Central|ERROR|FileNotFoundException|Required file missing|Parser.java:43
+2026-08-03T09:03:24|Server-C|South|INFO|None|Application running normally|N/A
+2026-08-03T09:06:04|Server-C|South|INFO|None|Application running normally|N/A
+2026-08-03T09:10:37|Server-C|East|INFO|None|Application running normally|N/A
+2026-08-03T09:12:23|Server-C|Central|INFO|None|Application running normally|N/A
+2026-08-03T09:14:19|Server-C|South|WARNING|DiskSpaceWarning|Disk space below 20%|ConfigLoader.java:59
+2026-08-03T09:16:44|Server-C|Central|ERROR|SQLException|Database connection failed|Logger.java:112
+2026-08-03T09:21:19|Server-C|Central|INFO|None|Application running normally|N/A
+2026-08-03T09:25:05|Server-C|North|WARNING|SocketTimeoutException|Connection timeout while contacting API|ConfigLoader.java:144
+2026-08-03T09:28:34|Server-C|East|WARNING|AuthenticationException|Invalid login attempt detected|Parser.java:168
+2026-08-03T09:31:54|Server-C|East|INFO|None|Application running normally|N/A
+2026-08-03T09:36:50|Server-C|North|WARNING|IllegalArgumentException|Invalid request parameter|Main.java:121
+2026-08-03T09:40:05|Server-C|Central|INFO|None|Application running normally|N/A
+2026-08-03T09:44:03|Server-C|West|ERROR|FileNotFoundException|Required file missing|NetworkManager.java:144
+2026-08-03T09:46:00|Server-C|South|ERROR|IOException|Unable to read configuration file|ConfigLoader.java:75
+2026-08-03T09:50:40|Server-C|North|FATAL|OutOfMemoryError|JVM heap space exhausted|MemoryManager.java:109
+2026-08-03T09:52:24|Server-C|North|ERROR|SQLException|Database connection failed|Main.java:33
+2026-08-03T09:53:26|Server-C|South|INFO|None|Application running normally|N/A
+2026-08-03T09:56:01|Server-C|North|INFO|None|Application running normally|N/A
+2026-08-03T09:58:55|Server-C|East|ERROR|SQLException|Database connection failed|Database.java:127
+2026-08-03T10:03:32|Server-C|West|INFO|None|Application running normally|N/A
+2026-08-03T10:05:39|Server-C|North|ERROR|ArrayIndexOutOfBoundsException|Array index exceeded valid range|Logger.java:80
+2026-08-03T10:10:08|Server-C|South|ERROR|SQLException|Database connection failed|Parser.java:45
+2026-08-03T10:12:14|Server-C|South|INFO|None|Application running normally|N/A
+2026-08-03T10:14:03|Server-C|Central|INFO|None|Application running normally|N/A
+2026-08-03T10:17:06|Server-C|South|WARNING|DiskSpaceWarning|Disk space below 20%|ConfigLoader.java:107
+2026-08-03T10:21:17|Server-C|East|ERROR|SQLException|Database connection failed|Logger.java:174
+2026-08-03T10:24:46|Server-C|Central|ERROR|ClassNotFoundException|Driver class not found|NetworkManager.java:110
+2026-08-03T10:29:02|Server-C|West|WARNING|IllegalArgumentException|Invalid request parameter|Logger.java:25
+2026-08-03T10:32:07|Server-C|West|FATAL|StackOverflowError|Recursive call exceeded stack limit|NetworkManager.java:59
+2026-08-03T10:33:09|Server-C|West|ERROR|SQLException|Database connection failed|Main.java:43
+2026-08-03T10:36:08|Server-C|West|ERROR|NumberFormatException|Invalid numeric value|NetworkManager.java:51
+2026-08-03T10:40:54|Server-C|South|WARNING|SocketTimeoutException|Connection timeout while contacting API|Database.java:138
+2026-08-03T10:42:08|Server-C|West|WARNING|DiskSpaceWarning|Disk space below 20%|Logger.java:69
+2026-08-03T10:45:33|Server-C|South|INFO|None|Application running normally|N/A
+2026-08-03T10:47:57|Server-C|North|INFO|None|Application running normally|N/A
+2026-08-03T10:51:42|Server-C|North|ERROR|ClassNotFoundException|Driver class not found|Logger.java:30
+2026-08-03T10:53:18|Server-C|Central|INFO|None|Application running normally|N/A
+2026-08-03T10:54:47|Server-C|Central|INFO|None|Application running normally|N/A
+2026-08-03T10:56:35|Server-C|East|WARNING|DiskSpaceWarning|Disk space below 20%|Logger.java:87
+2026-08-03T10:58:58|Server-C|West|INFO|None|Application running normally|N/A
+2026-08-03T11:01:17|Server-C|West|WARNING|AuthenticationException|Invalid login attempt detected|NetworkManager.java:144
+2026-08-03T11:04:18|Server-C|East|ERROR|NullPointerException|Null reference encountered while processing request|Main.java:53
+2026-08-03T11:08:27|Server-C|South|ERROR|NumberFormatException|Invalid numeric value|Database.java:31
+2026-08-03T11:12:14|Server-C|North|WARNING|AuthenticationException|Invalid login attempt detected|Parser.java:57
+2026-08-03T11:15:08|Server-C|South|INFO|None|Application running normally|N/A
+2026-08-03T11:19:58|Server-C|South|ERROR|NullPointerException|Null reference encountered while processing request|RequestHandler.java:171
+2026-08-03T11:21:51|Server-C|South|ERROR|FileNotFoundException|Required file missing|Logger.java:21
+2026-08-03T11:26:33|Server-C|Central|INFO|None|Application running normally|N/A
+2026-08-03T11:30:34|Server-C|Central|WARNING|SocketTimeoutException|Connection timeout while contacting API|Parser.java:169
+2026-08-03T11:33:22|Server-C|East|WARNING|SocketTimeoutException|Connection timeout while contacting API|MemoryManager.java:30
+2026-08-03T11:35:30|Server-C|East|WARNING|AuthenticationException|Invalid login attempt detected|Parser.java:83
+2026-08-03T11:40:21|Server-C|North|INFO|None|Application running normally|N/A
+2026-08-03T11:42:52|Server-C|South|FATAL|OutOfMemoryError|JVM heap space exhausted|MemoryManager.java:41
+2026-08-03T11:47:30|Server-C|South|WARNING|AuthenticationException|Invalid login attempt detected|ConfigLoader.java:55
+2026-08-03T11:51:14|Server-C|North|INFO|None|Application running normally|N/A
+2026-08-03T11:54:19|Server-C|West|WARNING|SocketTimeoutException|Connection timeout while contacting API|Database.java:104
+2026-08-03T11:57:07|Server-C|West|WARNING|DiskSpaceWarning|Disk space below 20%|Main.java:46

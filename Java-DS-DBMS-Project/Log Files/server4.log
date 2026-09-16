@@ -1,0 +1,58 @@
+2026-08-04T09:03:55|Server-D|North|WARNING|IllegalArgumentException|Invalid request parameter|RequestHandler.java:127
+2026-08-04T09:05:58|Server-D|North|INFO|None|Application running normally|N/A
+2026-08-04T09:10:06|Server-D|East|ERROR|ArithmeticException|Division by zero|ConfigLoader.java:107
+2026-08-04T09:13:07|Server-D|South|ERROR|FileNotFoundException|Required file missing|Main.java:166
+2026-08-04T09:15:21|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T09:19:34|Server-D|Central|INFO|None|Application running normally|N/A
+2026-08-04T09:21:58|Server-D|East|WARNING|SocketTimeoutException|Connection timeout while contacting API|MemoryManager.java:92
+2026-08-04T09:23:05|Server-D|East|INFO|None|Application running normally|N/A
+2026-08-04T09:24:14|Server-D|East|WARNING|SocketTimeoutException|Connection timeout while contacting API|MemoryManager.java:92
+2026-08-04T09:27:05|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T09:29:41|Server-D|Central|INFO|None|Application running normally|N/A
+2026-08-04T09:34:20|Server-D|West|ERROR|NumberFormatException|Invalid numeric value|Main.java:47
+2026-08-04T09:38:20|Server-D|East|WARNING|SocketTimeoutException|Connection timeout while contacting API|Database.java:172
+2026-08-04T09:40:33|Server-D|South|INFO|None|Application running normally|N/A
+2026-08-04T09:44:47|Server-D|East|INFO|None|Application running normally|N/A
+2026-08-04T09:46:27|Server-D|North|ERROR|FileNotFoundException|Required file missing|RequestHandler.java:20
+2026-08-04T09:48:47|Server-D|North|FATAL|OutOfMemoryError|JVM heap space exhausted|NetworkManager.java:175
+2026-08-04T09:49:47|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T09:51:32|Server-D|Central|ERROR|NumberFormatException|Invalid numeric value|ConfigLoader.java:164
+2026-08-04T09:55:55|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T09:58:34|Server-D|South|WARNING|IllegalArgumentException|Invalid request parameter|Main.java:57
+2026-08-04T10:00:40|Server-D|East|ERROR|ArithmeticException|Division by zero|NetworkManager.java:178
+2026-08-04T10:03:31|Server-D|South|WARNING|DiskSpaceWarning|Disk space below 20%|Parser.java:180
+2026-08-04T10:07:29|Server-D|Central|WARNING|AuthenticationException|Invalid login attempt detected|RequestHandler.java:117
+2026-08-04T10:12:11|Server-D|North|INFO|None|Application running normally|N/A
+2026-08-04T10:15:08|Server-D|Central|INFO|None|Application running normally|N/A
+2026-08-04T10:17:46|Server-D|North|WARNING|IllegalArgumentException|Invalid request parameter|NetworkManager.java:55
+2026-08-04T10:20:52|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T10:24:05|Server-D|North|WARNING|SocketTimeoutException|Connection timeout while contacting API|Main.java:34
+2026-08-04T10:27:49|Server-D|Central|ERROR|ClassNotFoundException|Driver class not found|Logger.java:144
+2026-08-04T10:31:20|Server-D|Central|ERROR|NullPointerException|Null reference encountered while processing request|Database.java:70
+2026-08-04T10:34:36|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T10:35:48|Server-D|South|ERROR|ArithmeticException|Division by zero|RequestHandler.java:162
+2026-08-04T10:40:07|Server-D|East|INFO|None|Application running normally|N/A
+2026-08-04T10:42:29|Server-D|Central|INFO|None|Application running normally|N/A
+2026-08-04T10:44:38|Server-D|North|ERROR|ClassNotFoundException|Driver class not found|RequestHandler.java:112
+2026-08-04T10:47:19|Server-D|East|ERROR|FileNotFoundException|Required file missing|NetworkManager.java:49
+2026-08-04T10:51:27|Server-D|East|INFO|None|Application running normally|N/A
+2026-08-04T10:52:34|Server-D|West|ERROR|NullPointerException|Null reference encountered while processing request|MemoryManager.java:87
+2026-08-04T10:53:53|Server-D|Central|WARNING|AuthenticationException|Invalid login attempt detected|Logger.java:68
+2026-08-04T10:56:43|Server-D|East|ERROR|FileNotFoundException|Required file missing|Database.java:163
+2026-08-04T10:59:42|Server-D|West|WARNING|DiskSpaceWarning|Disk space below 20%|Parser.java:172
+2026-08-04T11:03:09|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T11:07:15|Server-D|East|INFO|None|Application running normally|N/A
+2026-08-04T11:12:06|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T11:16:48|Server-D|North|FATAL|StackOverflowError|Recursive call exceeded stack limit|Logger.java:42
+2026-08-04T11:20:42|Server-D|North|INFO|None|Application running normally|N/A
+2026-08-04T11:25:14|Server-D|South|FATAL|StackOverflowError|Recursive call exceeded stack limit|MemoryManager.java:112
+2026-08-04T11:27:40|Server-D|South|INFO|None|Application running normally|N/A
+2026-08-04T11:29:06|Server-D|South|ERROR|ClassNotFoundException|Driver class not found|Database.java:35
+2026-08-04T11:31:12|Server-D|North|INFO|None|Application running normally|N/A
+2026-08-04T11:32:24|Server-D|West|ERROR|SQLException|Database connection failed|Logger.java:132
+2026-08-04T11:36:04|Server-D|West|ERROR|NumberFormatException|Invalid numeric value|Parser.java:147
+2026-08-04T11:39:55|Server-D|Central|INFO|None|Application running normally|N/A
+2026-08-04T11:41:14|Server-D|West|INFO|None|Application running normally|N/A
+2026-08-04T11:44:09|Server-D|North|INFO|None|Application running normally|N/A
+2026-08-04T11:47:30|Server-D|North|FATAL|OutOfMemoryError|JVM heap space exhausted|Main.java:137
+2026-08-04T11:51:25|Server-D|South|WARNING|DiskSpaceWarning|Disk space below 20%|NetworkManager.java:86

@@ -1,0 +1,58 @@
+2026-08-05T09:03:06|Server-E|East|INFO|None|Application running normally|N/A
+2026-08-05T09:04:16|Server-E|South|ERROR|ClassNotFoundException|Driver class not found|RequestHandler.java:158
+2026-08-05T09:08:54|Server-E|Central|ERROR|ArithmeticException|Division by zero|Parser.java:75
+2026-08-05T09:13:08|Server-E|East|ERROR|ArrayIndexOutOfBoundsException|Array index exceeded valid range|Logger.java:101
+2026-08-05T09:17:30|Server-E|East|ERROR|ClassNotFoundException|Driver class not found|ConfigLoader.java:139
+2026-08-05T09:21:40|Server-E|Central|INFO|None|Application running normally|N/A
+2026-08-05T09:26:29|Server-E|South|INFO|None|Application running normally|N/A
+2026-08-05T09:30:40|Server-E|West|INFO|None|Application running normally|N/A
+2026-08-05T09:35:30|Server-E|South|ERROR|ArithmeticException|Division by zero|MemoryManager.java:143
+2026-08-05T09:37:03|Server-E|Central|WARNING|AuthenticationException|Invalid login attempt detected|Parser.java:155
+2026-08-05T09:41:17|Server-E|East|WARNING|IllegalArgumentException|Invalid request parameter|Database.java:120
+2026-08-05T09:45:27|Server-E|South|INFO|None|Application running normally|N/A
+2026-08-05T09:47:29|Server-E|North|WARNING|DiskSpaceWarning|Disk space below 20%|NetworkManager.java:154
+2026-08-05T09:50:26|Server-E|Central|INFO|None|Application running normally|N/A
+2026-08-05T09:52:47|Server-E|East|INFO|None|Application running normally|N/A
+2026-08-05T09:57:36|Server-E|East|ERROR|IOException|Unable to read configuration file|Database.java:133
+2026-08-05T10:01:32|Server-E|North|ERROR|FileNotFoundException|Required file missing|Parser.java:36
+2026-08-05T10:03:03|Server-E|South|ERROR|FileNotFoundException|Required file missing|Database.java:179
+2026-08-05T10:07:59|Server-E|South|ERROR|ArithmeticException|Division by zero|Logger.java:176
+2026-08-05T10:09:09|Server-E|East|WARNING|AuthenticationException|Invalid login attempt detected|Database.java:129
+2026-08-05T10:12:59|Server-E|Central|INFO|None|Application running normally|N/A
+2026-08-05T10:16:28|Server-E|East|ERROR|NumberFormatException|Invalid numeric value|Main.java:160
+2026-08-05T10:20:30|Server-E|North|WARNING|IllegalArgumentException|Invalid request parameter|Parser.java:171
+2026-08-05T10:22:16|Server-E|Central|FATAL|StackOverflowError|Recursive call exceeded stack limit|Database.java:81
+2026-08-05T10:26:18|Server-E|North|ERROR|NullPointerException|Null reference encountered while processing request|Logger.java:129
+2026-08-05T10:30:00|Server-E|East|INFO|None|Application running normally|N/A
+2026-08-05T10:31:50|Server-E|East|WARNING|AuthenticationException|Invalid login attempt detected|Logger.java:153
+2026-08-05T10:34:13|Server-E|West|ERROR|NumberFormatException|Invalid numeric value|NetworkManager.java:142
+2026-08-05T10:37:36|Server-E|Central|WARNING|AuthenticationException|Invalid login attempt detected|NetworkManager.java:83
+2026-08-05T10:38:56|Server-E|South|ERROR|ArithmeticException|Division by zero|RequestHandler.java:47
+2026-08-05T10:42:50|Server-E|Central|WARNING|IllegalArgumentException|Invalid request parameter|Parser.java:36
+2026-08-05T10:44:54|Server-E|South|WARNING|SocketTimeoutException|Connection timeout while contacting API|Parser.java:132
+2026-08-05T10:48:16|Server-E|South|ERROR|FileNotFoundException|Required file missing|Logger.java:20
+2026-08-05T10:52:56|Server-E|East|INFO|None|Application running normally|N/A
+2026-08-05T10:57:10|Server-E|Central|ERROR|SQLException|Database connection failed|Logger.java:157
+2026-08-05T10:58:39|Server-E|East|ERROR|ArrayIndexOutOfBoundsException|Array index exceeded valid range|ConfigLoader.java:104
+2026-08-05T11:03:26|Server-E|East|ERROR|ArithmeticException|Division by zero|MemoryManager.java:129
+2026-08-05T11:06:34|Server-E|West|WARNING|IllegalArgumentException|Invalid request parameter|ConfigLoader.java:127
+2026-08-05T11:09:30|Server-E|East|ERROR|IOException|Unable to read configuration file|Main.java:80
+2026-08-05T11:12:02|Server-E|South|ERROR|ArrayIndexOutOfBoundsException|Array index exceeded valid range|ConfigLoader.java:109
+2026-08-05T11:13:34|Server-E|South|ERROR|SQLException|Database connection failed|RequestHandler.java:140
+2026-08-05T11:15:07|Server-E|Central|INFO|None|Application running normally|N/A
+2026-08-05T11:17:56|Server-E|Central|INFO|None|Application running normally|N/A
+2026-08-05T11:22:29|Server-E|East|ERROR|IOException|Unable to read configuration file|Parser.java:180
+2026-08-05T11:25:54|Server-E|South|INFO|None|Application running normally|N/A
+2026-08-05T11:29:13|Server-E|South|WARNING|AuthenticationException|Invalid login attempt detected|Parser.java:66
+2026-08-05T11:31:42|Server-E|South|INFO|None|Application running normally|N/A
+2026-08-05T11:35:00|Server-E|Central|WARNING|DiskSpaceWarning|Disk space below 20%|Parser.java:105
+2026-08-05T11:37:38|Server-E|Central|ERROR|IOException|Unable to read configuration file|Main.java:110
+2026-08-05T11:42:04|Server-E|West|INFO|None|Application running normally|N/A
+2026-08-05T11:44:02|Server-E|North|INFO|None|Application running normally|N/A
+2026-08-05T11:46:33|Server-E|East|WARNING|AuthenticationException|Invalid login attempt detected|NetworkManager.java:166
+2026-08-05T11:51:23|Server-E|East|INFO|None|Application running normally|N/A
+2026-08-05T11:55:16|Server-E|Central|WARNING|IllegalArgumentException|Invalid request parameter|Logger.java:65
+2026-08-05T11:59:42|Server-E|South|WARNING|IllegalArgumentException|Invalid request parameter|Logger.java:162
+2026-08-05T12:02:53|Server-E|South|WARNING|AuthenticationException|Invalid login attempt detected|Main.java:113
+2026-08-05T12:07:49|Server-E|West|WARNING|SocketTimeoutException|Connection timeout while contacting API|RequestHandler.java:50
+2026-08-05T12:09:58|Server-E|Central|ERROR|ArithmeticException|Division by zero|RequestHandler.java:99

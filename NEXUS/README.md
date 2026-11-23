@@ -6,7 +6,7 @@ NEXUS is a native Android prototype for a personal AI second brain. It uses Kotl
 - Futuristic home dashboard
 - Local quick-capture notes persisted in a Room database
 - Memory list and basic search backed by local Room storage
-- Chat UI scaffold (AI provider not connected yet)
+- Gemini chat gateway with local memory context and encrypted on-device API-key storage
 - Actions screen scaffold (no device actions run yet)
 
 ## Build
@@ -16,7 +16,7 @@ NEXUS is a native Android prototype for a personal AI second brain. It uses Kotl
 4. Run the `app` configuration on an emulator or Android phone.
 
 ## Privacy and API keys
-No Gemini API key is included in this repository. The Gemini integration will be added separately with a clear API-key strategy; never commit secrets to source control.
+No Gemini API key is included in this repository. For the personal prototype, enter your own key through the in-app settings; it is encrypted with Android Keystore. For a public release, use a protected backend because keys embedded in or used directly by a client app can still be extracted. Never commit secrets to source control.
 
 ## Roadmap
 1. UI + local capture

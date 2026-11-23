@@ -26,4 +26,4 @@ No Gemini API key is included in this repository. The Gemini integration will be
 5. Permission-gated reminders and Android actions
 6. Export, deletion, accessibility and reliability testing
 
-This is an early MVP, not a full system-level Android assistant. Android permissions and OS restrictions apply.
+This is an early MVP with Room-backed local memory, not a full system-level Android assistant. Android permissions and OS restrictions apply.

@@ -10,6 +10,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -189,7 +190,7 @@ private fun TopBar() {
 }
 
 @Composable
-private fun HomeScreen(
+private fun ColumnScope.HomeScreen(
     notes: List<MemoryNote>,
     onCapture: () -> Unit,
     onOpenMemory: () -> Unit,
@@ -256,7 +257,7 @@ private fun HomeScreen(
 }
 
 @Composable
-private fun MemoryScreen(
+private fun ColumnScope.MemoryScreen(
     notes: List<MemoryNote>,
     query: String,
     onQuery: (String) -> Unit,
@@ -298,7 +299,7 @@ private fun MemoryScreen(
 }
 
 @Composable
-private fun ChatScreen(input: String, reply: String, onInput: (String) -> Unit, onSend: () -> Unit) {
+private fun ColumnScope.ChatScreen(input: String, reply: String, onInput: (String) -> Unit, onSend: () -> Unit) {
     Column(Modifier.weight(1f).padding(horizontal = 18.dp, vertical = 8.dp)) {
         Text("NEXUS chat", color = MainText, fontSize = 25.sp, fontWeight = FontWeight.Bold)
         Text("Ask, plan and connect your ideas.", color = Muted, fontSize = 13.sp, modifier = Modifier.padding(top = 4.dp))
@@ -324,7 +325,7 @@ private fun ChatScreen(input: String, reply: String, onInput: (String) -> Unit, 
 }
 
 @Composable
-private fun ActionsScreen() {
+private fun ColumnScope.ActionsScreen() {
     Column(Modifier.weight(1f).padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Text("Action engine", color = MainText, fontSize = 25.sp, fontWeight = FontWeight.Bold)
         Text("Planned phone actions will always require clear permissions and confirmation.", color = Muted, fontSize = 13.sp, lineHeight = 20.sp)

@@ -60,6 +60,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.nexus.secondbrain.core.ai.ApiKeyStore
+import com.nexus.secondbrain.core.ai.GeminiRestGateway
 import com.nexus.secondbrain.data.MemoryEntity
 import com.nexus.secondbrain.data.NexusDatabase
 import kotlinx.coroutines.launch
@@ -83,19 +85,23 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun NexusApp(context: Context) {
     val database = remember { NexusDatabase.getInstance(context) }
+    val apiKeyStore = remember { ApiKeyStore(context) }
     val notes by database.memoryDao().observeAll().collectAsState(initial = emptyList())
     val scope = rememberCoroutineScope()
     var selectedTab by remember { mutableStateOf("Home") }
     var query by remember { mutableStateOf("") }
     var showCapture by remember { mutableStateOf(false) }
+    var showSettings by remember { mutableStateOf(false) }
+    var apiKeyDraft by remember { mutableStateOf("") }
     var noteTitle by remember { mutableStateOf("") }
     var noteBody by remember { mutableStateOf("") }
     var chatInput by remember { mutableStateOf("") }
-    var chatReply by remember { mutableStateOf("Your local memory is ready. Gemini is not connected yet.") }
+    var chatReply by remember { mutableStateOf("NEXUS is ready. Add your Gemini API key in settings to enable AI chat.") }
+    var chatBusy by remember { mutableStateOf(false) }
 
     Surface(color = Background, modifier = Modifier.fillMaxSize()) {
         Column(Modifier.fillMaxSize().navigationBarsPadding()) {
-            TopBar()
+            TopBar(onSettings = { apiKeyDraft = apiKeyStore.read().orEmpty(); showSettings = true })
             when (selectedTab) {
                 "Home" -> HomeScreen(
                     notes = notes,
@@ -114,10 +120,22 @@ private fun NexusApp(context: Context) {
                     input = chatInput,
                     reply = chatReply,
                     onInput = { chatInput = it },
+                    busy = chatBusy,
                     onSend = {
-                        if (chatInput.isNotBlank()) {
-                            chatReply = "This prototype has not sent your message to an AI service. Gemini integration is the next milestone."
+                        val message = chatInput.trim()
+                        if (message.isNotEmpty() && !chatBusy) {
                             chatInput = ""
+                            chatBusy = true
+                            chatReply = "Thinking…"
+                            scope.launch {
+                                val relevantMemories = database.memoryDao().search(message, 5)
+                                val result = GeminiRestGateway({ apiKeyStore.read() }).answer(message, relevantMemories)
+                                chatReply = result.fold(
+                                    onSuccess = { it },
+                                    onFailure = { "Could not get a Gemini response: ${it.message ?: "Unknown error"}" }
+                                )
+                                chatBusy = false
+                            }
                         }
                     }
                 )
@@ -125,6 +143,35 @@ private fun NexusApp(context: Context) {
             }
             BottomBar(selected = selectedTab, onSelect = { selectedTab = it })
         }
+    }
+
+    if (showSettings) {
+        AlertDialog(
+            onDismissRequest = { showSettings = false },
+            containerColor = Panel,
+            title = { Text("Gemini settings", color = MainText, fontWeight = FontWeight.SemiBold) },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text("Enter your Gemini API key. It is encrypted with Android Keystore on this device. For a public app, use a protected backend instead.", color = Muted, fontSize = 12.sp, lineHeight = 18.sp)
+                    DarkField(apiKeyDraft, { apiKeyDraft = it }, "Paste Gemini API key")
+                    Text("Model: ${GeminiRestGateway.DEFAULT_MODEL}", color = Cyan, fontSize = 11.sp)
+                }
+            },
+            confirmButton = {
+                Button(onClick = {
+                    if (apiKeyDraft.isNotBlank()) apiKeyStore.save(apiKeyDraft.trim())
+                    showSettings = false
+                }, colors = ButtonDefaults.buttonColors(containerColor = Cyan, contentColor = Background)) {
+                    Text("Save key", fontWeight = FontWeight.Bold)
+                }
+            },
+            dismissButton = {
+                Row {
+                    TextButton(onClick = { apiKeyStore.clear(); apiKeyDraft = ""; showSettings = false }) { Text("Remove key", color = Violet) }
+                    TextButton(onClick = { showSettings = false }) { Text("Cancel", color = Muted) }
+                }
+            }
+        )
     }
 
     if (showCapture) {
@@ -164,7 +211,7 @@ private fun NexusApp(context: Context) {
 }
 
 @Composable
-private fun TopBar() {
+private fun TopBar(onSettings: () -> Unit) {
     Row(
         Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -179,7 +226,7 @@ private fun TopBar() {
                 Text("PERSONAL INTELLIGENCE", color = Muted, fontSize = 9.sp, letterSpacing = 1.5.sp)
             }
         }
-        Icon(Icons.Default.Tune, contentDescription = "Preferences", tint = Cyan, modifier = Modifier.size(22.dp))
+        IconButton(onClick = onSettings) { Icon(Icons.Default.Tune, contentDescription = "Gemini settings", tint = Cyan, modifier = Modifier.size(22.dp)) }
     }
 }
 
@@ -287,7 +334,7 @@ private fun ColumnScope.MemoryScreen(
 }
 
 @Composable
-private fun ColumnScope.ChatScreen(input: String, reply: String, onInput: (String) -> Unit, onSend: () -> Unit) {
+private fun ColumnScope.ChatScreen(input: String, reply: String, busy: Boolean, onInput: (String) -> Unit, onSend: () -> Unit) {
     Column(Modifier.weight(1f).padding(horizontal = 18.dp, vertical = 8.dp)) {
         Text("NEXUS chat", color = MainText, fontSize = 25.sp, fontWeight = FontWeight.Bold)
         Text("Ask, plan and connect your ideas.", color = Muted, fontSize = 13.sp, modifier = Modifier.padding(top = 4.dp))
@@ -299,9 +346,9 @@ private fun ColumnScope.ChatScreen(input: String, reply: String, onInput: (Strin
         Spacer(Modifier.weight(1f))
         Row(Modifier.fillMaxWidth().background(Panel, RoundedCornerShape(18.dp)).border(1.dp, Border, RoundedCornerShape(18.dp)).padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
             Box(Modifier.weight(1f).padding(horizontal = 6.dp)) { DarkField(input, onInput, "Message NEXUS…") }
-            IconButton(onClick = onSend) { Icon(Icons.Default.Send, "Send", tint = Cyan) }
+            IconButton(onClick = onSend, enabled = !busy && input.isNotBlank()) { Icon(Icons.Default.Send, "Send", tint = if (busy) Muted else Cyan) }
         }
-        Text("Gemini is not connected yet. Messages are not sent to an AI service.", color = Muted, fontSize = 10.sp, modifier = Modifier.padding(top = 8.dp, start = 4.dp, bottom = 8.dp))
+        Text(if (busy) "Gemini is generating a response…" else "Relevant saved memories are included when matched. Avoid storing sensitive secrets in notes.", color = Muted, fontSize = 10.sp, modifier = Modifier.padding(top = 8.dp, start = 4.dp, bottom = 8.dp))
     }
 }
 

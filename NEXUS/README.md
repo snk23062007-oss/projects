@@ -5,7 +5,7 @@ NEXUS is a native Android prototype for a personal AI second brain. It uses Kotl
 ## Current MVP
 - Futuristic home dashboard
 - Local quick-capture notes persisted in a Room database
-- Memory list and basic search
+- Memory list and basic search backed by local Room storage
 - Chat UI scaffold (AI provider not connected yet)
 - Actions screen scaffold (no device actions run yet)
 
